@@ -6,7 +6,6 @@
 .swiper-slide {
   position: relative; /* Ensure the slide is positioned correctly */
   cursor: pointer !important;
-  background-color: tomato !important;
 }
 .slide-overlay {
   opacity: 0;
