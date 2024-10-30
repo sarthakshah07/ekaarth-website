@@ -35,8 +35,8 @@ const CommonHeader = () => {
     },
     {
       title: "Connect",
-      // link: '/connect',
-      link: "#",
+      link: '/connect',
+      // link: "#",
       isCurrent: false,
     },
   ]);
@@ -54,7 +54,7 @@ const CommonHeader = () => {
       <List>
         {headerMenu?.map((text, index) => (
           <ListItem key={text.title} disablePadding>
-            <ListItemButton onClick={() => navigate(`/${text.link}`)}>
+            <ListItemButton onClick={() => navigate(`${text.link}`)}>
               <ListItemText primary={text.title} />
             </ListItemButton>
           </ListItem>
