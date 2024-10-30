@@ -7,7 +7,7 @@ import CommonHeader from "../../Components/CommonHeader"
 
 const Landing = () => {
     return (
-        <WrapperComponent>
+        <WrapperComponent isLanding={true}>
             <Grid2 container flexDirection={"column"} justifyContent={"space-between"} sx={{height:"100%",pt:2}}>
             <CommonHeader />
             <Box sx={{display:'flex',justifyContent:'center',alignItems:'center',flexDirection:'column',my:5}}>
