@@ -1,4 +1,4 @@
-import { Email, Facebook, Instagram, LogoDev, Menu } from "@mui/icons-material";
+import { Email, Facebook, Instagram, LinkedIn, LogoDev, Menu, YouTube } from "@mui/icons-material";
 import {
   Box,
   Button,
@@ -16,6 +16,7 @@ import {
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import homelogo from "../assets/images/homeLogo.png";
+import loaderImage from '../assets/images/loading.png'
 
 const CommonHeader = () => {
   const navigate = useNavigate();
@@ -87,10 +88,10 @@ const CommonHeader = () => {
           </IconButton>
         )}
         <img
-          src={homelogo}
+          src={loaderImage}
           alt="logo"
-          width={110}
-          height={70}
+          width={50}
+          height={40}
           style={{ cursor: "pointer" }}
           onClick={() => navigate("/")}
         />
@@ -129,11 +130,12 @@ const CommonHeader = () => {
           justifyContent: "end",
           alignItems: "center",
           flex: 1,
+          gap: 1,
         }}
       >
         <Instagram />
-        <Facebook />
-        <Email />
+        <YouTube />
+        <LinkedIn />
       </Box>
       {/* </Grid2> */}
     </Grid2>

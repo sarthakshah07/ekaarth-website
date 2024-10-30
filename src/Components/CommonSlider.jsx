@@ -31,10 +31,10 @@ const CommonSlider = ({ sliderData }) => {
             backgroundImage: `url(${item.image})`, 
             position: "relative", 
             minHeight: 150,
+            // minWidth:200,
             backgroundSize: 'cover', // Ensure the background image covers the slide
             backgroundPosition: 'center', // Center the background image
             overflow: 'hidden', // Prevent content overflow
-            borderRadius: '10px',
           }}
         >
           <div 

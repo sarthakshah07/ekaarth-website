@@ -21,7 +21,7 @@ const WrapperComponent = ({ children, isLanding }) => {
       sx={{ display: "flex", justifyContent: "center",height:"100dvh", maxHeight:"100dvh", width:"100%"}}
     >
        {showLoading && <CommonLoader />}
-      <Grid2 item size={{ xs: 11, md: !isLanding ? 8 : 10 }} sx={{ maxHeight:"100dvh",position:"relative"}} >
+      <Grid2 item size={{ xs: 11, md: !isLanding ? 10 : 8 }} sx={{ maxHeight:"100dvh",position:"relative"}} >
         {pathname != "/" && <CommonHeader />}
         {children}
       </Grid2>
