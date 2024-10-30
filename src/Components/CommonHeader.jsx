@@ -54,7 +54,7 @@ const CommonHeader = () => {
       <List>
         {headerMenu?.map((text, index) => (
           <ListItem key={text.title} disablePadding>
-            <ListItemButton onClick={() => navigate(`/${text.link}`)}>
+            <ListItemButton onClick={() => navigate(`${text.link}`)}>
               <ListItemText primary={text.title} />
             </ListItemButton>
           </ListItem>
