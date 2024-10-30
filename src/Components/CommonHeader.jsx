@@ -35,8 +35,8 @@ const CommonHeader = () => {
     },
     {
       title: "Connect",
-      // link: '/connect',
-      link: "#",
+      link: '/connect',
+      // link: "#",
       isCurrent: false,
     },
   ]);
