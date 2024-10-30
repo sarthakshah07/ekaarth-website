@@ -3,10 +3,11 @@ import CommonHeader from "./CommonHeader";
 import CommonSlider from "./CommonSlider";
 import CommonLoader from "./CommonLoader";
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const WrapperComponent = ({ children, isLanding }) => {
     const [showLoading, setShowLoading] = useState(true);
-console.log(isLanding)
+    const {pathname} = useLocation()
     useEffect(() => {
         setTimeout(() => {
             setShowLoading(false);
@@ -14,19 +15,19 @@ console.log(isLanding)
     }, []);
 
   return (
-    // <Box sx={{ display: 'flex' ,justifyContent:'center',alignItems:'center'}}>
+    <Box sx={{ display: 'flex' ,justifyContent:'center',alignItems:'center',flexDirection:"column",maxHeight:"100dvh"}}>
     <Grid2
       container
-      sx={{ display: "flex", justifyContent: "center", height: "100vh" ,maxHeight:"100vh"}}
+      sx={{ display: "flex", justifyContent: "center",height:"100dvh", maxHeight:"100dvh", width:"100%"}}
     >
-      <Grid2 item size={{ xs: 11, md: !isLanding ? 8 : 10 }}>
        {showLoading && <CommonLoader />}
-        <CommonHeader />
+      <Grid2 item size={{ xs: 11, md: !isLanding ? 8 : 10 }} sx={{ maxHeight:"100dvh",position:"relative"}} >
+        {pathname != "/" && <CommonHeader />}
         {children}
       </Grid2>
     </Grid2>
 
-    // </Box>
+     </Box>
   );
 };
 
