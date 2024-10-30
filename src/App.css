@@ -1,8 +1,10 @@
 
 
 *{
-  background:"#F7F2EE"
+  background:"#F7F2EE";
+  
 }
+
 .swiper-slide {
   position: relative; /* Ensure the slide is positioned correctly */
   cursor: pointer !important;
