@@ -1,43 +1,61 @@
-import { Email, Facebook, Instagram, LogoDev, Menu } from '@mui/icons-material'
-import { Box, Button, Drawer, Grid2, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, useMediaQuery } from '@mui/material'
-import React, { useEffect, useState } from 'react'
-import {useLocation, useNavigate } from 'react-router-dom'
-import homelogo from '../assets/images/homeLogo.png'
+import { Email, Facebook, Instagram, LinkedIn, LogoDev, Menu, YouTube } from "@mui/icons-material";
+import {
+  Box,
+  Button,
+  Drawer,
+  Grid2,
+  IconButton,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
+import React, { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import homelogo from "../assets/images/homeLogo.png";
+import loaderImage from '../assets/images/loading.png'
 
 const CommonHeader = () => {
-    const navigate = useNavigate()
-    const {pathname} = useLocation()
-    const isMobile = useMediaQuery('(max-width:600px)')
-    const [open, setOpen] = useState(false);
-    const [headerMenu, setHeaderMenu] = useState([
-        {
-            title: 'About Us',
-            link: '/about',
-            isCurrent   : false
-        },
-        {
-            title: 'Work',
-            link: '#',
-            isCurrent   : false
-        },
-        {
-            title: 'Connect',
-            // link: '/connect',
-            link:"#",
-            isCurrent   : false
-        },
-    ]);
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
+  const isMobile = useMediaQuery("(max-width:600px)");
+  const [open, setOpen] = useState(false);
+  const [headerMenu, setHeaderMenu] = useState([
+    {
+      title: "About Us",
+      link: "/about",
+      isCurrent: false,
+    },
+    {
+      title: "Work",
+      link: "#",
+      isCurrent: false,
+    },
+    {
+      title: "Connect",
+      link: '/connect',
+      // link: "#",
+      isCurrent: false,
+    },
+  ]);
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
 
   const DrawerList = (
-    <Box sx={{ width: 250 ,padding:2}} role="presentation" onClick={toggleDrawer(false)}>
-      <List >
+    <Box
+      sx={{ width: 250, padding: 2 }}
+      role="presentation"
+      onClick={toggleDrawer(false)}
+    >
+      <List>
         {headerMenu?.map((text, index) => (
           <ListItem key={text.title} disablePadding>
-            <ListItemButton onClick={() => navigate(`/${text.link}`)}>
+            <ListItemButton onClick={() => navigate(`${text.link}`)}>
               <ListItemText primary={text.title} />
             </ListItemButton>
           </ListItem>
@@ -48,11 +66,11 @@ const CommonHeader = () => {
 
   useEffect(() => {
     headerMenu.map((item, index) => {
-        if (pathname === item.link) {
-            headerMenu[index].isCurrent = true
-        }
-    })
-  },[pathname])
+      if (pathname === item.link) {
+        headerMenu[index].isCurrent = true;
+      }
+    });
+  }, [pathname]);
   return (
     <Grid2 xs={12} display='flex' p={isMobile ? 0 : 2}  width={"100%"}>
         {/* <Grid2 container> */}
@@ -67,22 +85,26 @@ const CommonHeader = () => {
                 sx={{textTransform:'capitalize',cursor:'pointer',color:'black',fontWeight:item.isCurrent ? 'bold' : 'normal',textDecoration:item.isCurrent ? 'underline' : 'none'}}>{item.title}</Button>    
             ))}
 
-            <Drawer
-                anchor='left'
-                open={open}
-                onClose={toggleDrawer(false)}                
-            >
-                {DrawerList}
-            </Drawer>
-            </Box>
-            <Box sx={{display:'flex',justifyContent:'end',alignItems:'center', flex:1}}>
-                <Instagram/>
-                <Facebook/>
-                <Email/>
-            </Box>
-        {/* </Grid2> */}
+        <Drawer anchor="left" open={open} onClose={toggleDrawer(false)}>
+          {DrawerList}
+        </Drawer>
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "end",
+          alignItems: "center",
+          flex: 1,
+          gap: 1,
+        }}
+      >
+        <Instagram />
+        <YouTube />
+        <LinkedIn />
+      </Box>
+      {/* </Grid2> */}
     </Grid2>
-  )
-}
+  );
+};
 
-export default CommonHeader
+export default CommonHeader;

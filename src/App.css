@@ -1,8 +1,12 @@
 
 
 *{
-  background:"#F7F2EE"
+  background:"#F7F2EE";
+  font-style: Nero Cafe M54 Custom Font !important;
+  color: #4C3926 !important;
+  text-align: justify !important;
 }
+
 .swiper-slide {
   position: relative; /* Ensure the slide is positioned correctly */
   cursor: pointer !important;
