@@ -13,3 +13,59 @@
 .swiper-slide:hover .slide-overlay {
   opacity: 1; /* Show overlay on hover */
 }
+/* .home-logo{
+  height: 250px !important; 
+  width: 500px !important;
+  object-fit: contain;
+} */
+@media screen and (max-width: 2000px) {
+  .home-logo{
+    height: 500px !important; 
+    width: 400px !important;
+    object-fit: contain;
+    background-position: center;
+  }
+}
+@media screen and (max-width: 1800px) {
+  .home-logo{
+    height: 230px !important; 
+    width: 400px !important;
+    object-fit: contain;
+    background-position: center;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .home-logo{
+    height: 130px !important; 
+    width: 200px !important;
+    object-fit: contain;
+    background-position: center;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .home-logo{
+    height: 120px !important; 
+    width: 200px !important;
+    object-fit: contain;
+    background-position: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  .home-logo{
+    height: 150px !important; 
+    width: 200px !important;
+    object-fit: contain;
+    background-position: center;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 10px; /* Width of the bullet */
+  height: 10px; /* Height of the bullet */
+  margin: 0 5px; /* Spacing between bullets */
+  transition: all 0.3s; /* Smooth transition for hover effect */
+}
+
+.swiper-pagination-bullet-active {
+  --swiper-theme-color: #4C3926;
+}

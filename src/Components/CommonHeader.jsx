@@ -54,7 +54,7 @@ const CommonHeader = () => {
     })
   },[pathname])
   return (
-    <Grid2 xs={12} display='flex' p={isMobile ? 0 : 2} >
+    <Grid2 xs={12} display='flex' p={isMobile ? 0 : 2}  width={"100%"}>
         {/* <Grid2 container> */}
         <Box sx={{display:'flex',justifyContent:'start',alignItems:'center', flex:1}}>
             {isMobile && <IconButton onClick={toggleDrawer(true)}><Menu/></IconButton>}
