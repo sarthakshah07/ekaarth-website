@@ -1,4 +1,4 @@
-import { Box, Grid2, Paper, Typography } from "@mui/material"
+import { Box, Container, Grid2, Paper, Typography } from "@mui/material"
 import WrapperComponent from "../../Components/wrapperComponent"
 import homelogo from '../../assets/images/homeLogo.png'
 import CommonSlider from "../../Components/CommonSlider"
@@ -7,30 +7,26 @@ import CommonHeader from "../../Components/CommonHeader"
 
 const Landing = () => {
     return (
-        <WrapperComponent>
-            <Grid2 container flexDirection={"column"} justifyContent={"space-between"} sx={{height:"100%"}}>
-                
+        // <WrapperComponent>
+        <Container maxWidth="lg" sx={{ height:"100vh",display:"flex",flexDirection:"column", justifyContent:"space-between", alignItems:"center"}}>
             <CommonHeader />
-            <Box sx={{display:'flex',justifyContent:'center',alignItems:'center',flexDirection:'column',my:5}}>
-                    {/* <img src={homelogo} alt='logo'
-                    //  width={500} height={400}
-                     className="home-logo"
-                     /> */}
-                     <Paper elevation={0} sx={{p:2,backgroundImage:`url(${homelogo})`,backgroundSize:'contain',backgroundRepeat:'no-repeat'}} className="home-logo"/>
+                    <img src={homelogo} alt='logo'
+                     width="100%" height={300}
+                     style={{objectFit:"contain"}}
+                    //  className="home-logo"
+                     />
+                     
+            
 
-                    <Typography variant="h6">कर्मणः सुकृतस्य सिद्धिं सद्यः प्रसिद्ध्यति</Typography>
-            </Box>
-            <Grid2 size={12} pb={4}>
+                    <Typography variant="h6" width={"100%"} sx={{ display: "flex", justifyContent: "center" ,flex:1}}>कर्मणः सुकृतस्य सिद्धिं सद्यः प्रसिद्ध्यति</Typography>
+                   
+                   <Box sx={{width:"100%",pb:4}}>
 
            <CommonSlider sliderData={sliderData}/>
-            </Grid2>
-           {/* <footer> */}
-                {/* <Box sx={{position:"absolute",bottom:0,width:"100%"}}> */}
-
-                {/* </Box> */}
-           {/* </footer> */}
-           </Grid2>
-        </WrapperComponent>
+                   </Box>
+          </Container>
+        //    </Grid2>
+        // </WrapperComponent>
     )   
 }
 
