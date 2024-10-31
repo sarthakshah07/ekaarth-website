@@ -10,12 +10,13 @@ import { useMediaQuery } from "@mui/material";
 const CommonSlider = ({ sliderData }) => {
   const [autoplay, setAutoplay] = useState(true);
   const isMobile = useMediaQuery('(max-width:600px)');
+  const isTablet = useMediaQuery('(max-width:1200px)');
   
   return (
     <Swiper
       modules={[Navigation, Pagination, Autoplay]}
       spaceBetween={5}
-      slidesPerView={isMobile ? 1 : 5}
+      slidesPerView={isMobile ? 1 : isTablet ? 3 : 5}
       loop={true}
       autoplay={autoplay ? { delay: 2500, disableOnInteraction: false } : false}
       speed={1000} // Transition speed in milliseconds

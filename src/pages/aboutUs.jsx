@@ -112,18 +112,8 @@ const AboutUs = () => {
             {AboutUsData.arcitectProfileHeading}
           </Typography>
         </Grid2>
-        <Grid2 size={{ xs: 12, md: 7 }} height={"100%"}  display={"flex"} flexDirection={"column"} >
-          {/*  sx={{transform:"translateY(-20px)"}} */}
-
-          <Typography variant="body1">
-            {AboutUsData.arcitectDescription}
-          </Typography>
-          {/* <Typography variant="body1">
-            {AboutUsData.certificateDescription}
-          </Typography> */}
-        </Grid2>
         <Grid2
-          size={{ xs: 12, md: 5 }}
+          size={{ xs: 12 }}
           display={"flex"}
           justifyContent={"center"}
           alignItems={"center"}
@@ -143,12 +133,22 @@ const AboutUs = () => {
             }}
           /> */}
         </Grid2>
+        <Grid2 size={{ xs: 12 }} height={"100%"}  display={"flex"} flexDirection={"column"} gap={2} >
+          {/*  sx={{transform:"translateY(-20px)"}} */}
+
+          <Typography variant="body1">
+            {AboutUsData.arcitectDescription}
+          </Typography>
+          <Typography variant="body1">
+            {AboutUsData.certificateDescription}
+          </Typography>
+        </Grid2>
+        
         {/* <Grid2
           size={{ xs: 12}}
           display={"flex"}
           justifyContent={"center"}
           alignItems={"center"}
-          p={2}
           
         >
        

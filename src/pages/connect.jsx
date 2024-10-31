@@ -4,10 +4,19 @@ import { AboutUsData } from "../contents/aboutUsData";
 import { useFormik } from "formik";
 
 const ConnectPage = () => {
-  
+
   return (
     <WrapperComponent isLanding={false}>
-      <Typography variant="h4">Contact Us</Typography>
+       <Typography
+        variant="h6"
+        fontSize={28}
+        fontWeight={"bold"}
+        width={"100%"}
+        sx={{ display: "flex", justifyContent: "center" }}
+        pt={6}
+        pb={2}
+        textTransform={"uppercase"}
+      >Contact Us</Typography>
       <Grid2 container spacing={2} pb={4} py={2}>
         <Grid2
           size={{ xs: 12, md: 6 }}

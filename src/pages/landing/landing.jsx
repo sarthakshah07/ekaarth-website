@@ -1,4 +1,4 @@
-import { Box, Grid2, Typography } from "@mui/material"
+import { Box, Grid2, Paper, Typography } from "@mui/material"
 import WrapperComponent from "../../Components/wrapperComponent"
 import homelogo from '../../assets/images/homeLogo.png'
 import CommonSlider from "../../Components/CommonSlider"
@@ -7,11 +7,17 @@ import CommonHeader from "../../Components/CommonHeader"
 
 const Landing = () => {
     return (
-        <WrapperComponent isLanding={true}>
-            <Grid2 container flexDirection={"column"} justifyContent={"space-between"} sx={{height:"100%",pt:2}}>
+        <WrapperComponent>
+            <Grid2 container flexDirection={"column"} justifyContent={"space-between"} sx={{height:"100%"}}>
+                
             <CommonHeader />
             <Box sx={{display:'flex',justifyContent:'center',alignItems:'center',flexDirection:'column',my:5}}>
-                    <img src={homelogo} alt='logo' width={500} height={400}/>
+                    {/* <img src={homelogo} alt='logo'
+                    //  width={500} height={400}
+                     className="home-logo"
+                     /> */}
+                     <Paper elevation={0} sx={{p:2,backgroundImage:`url(${homelogo})`,backgroundSize:'contain',backgroundRepeat:'no-repeat'}} className="home-logo"/>
+
                     <Typography variant="h6">कर्मणः सुकृतस्य सिद्धिं सद्यः प्रसिद्ध्यति</Typography>
             </Box>
             <Grid2 size={12} pb={4}>

@@ -98,7 +98,7 @@ const CommonHeader = () => {
       </Box>
       <Box
         sx={{
-          display: { xs: "none", md: "flex" },
+          display: { xs: "none", sm: "flex" },
           justifyContent: "end",
           alignItems: "center",
           gap: 3,
