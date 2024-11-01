@@ -16,14 +16,16 @@ const Landing = () => {
         flexDirection: "column",
         justifyContent: "space-between",
         alignItems: "center",
+       
       }}
     >
-      <CommonHeader />
+      <CommonHeader isLanding/>
+      <Box sx={{ width: "100%" }}>
       <img
         src={homelogo}
         alt="logo"
         width="100%"
-        height={300}
+        height={250}
         style={{ objectFit: "contain" }}
         //  className="home-logo"
       />
@@ -31,10 +33,12 @@ const Landing = () => {
       <Typography
         variant="h6"
         width={"100%"}
-        sx={{ display: "flex", justifyContent: "center", flex: 1 ,transform:"translateY(-20px)" }}
+        sx={{ display: "flex", justifyContent: "center", flex: 1 ,transform:"translateY(20px)" }}
       >
         कर्मणः सुकृतस्य सिद्धिं सद्यः प्रसिद्ध्यति
       </Typography>
+      </Box>
+     
 
       <Box sx={{ width: "100%", mb: 4 }}>
         <CommonSlider sliderData={sliderData} />

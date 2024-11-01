@@ -38,7 +38,7 @@ const WrapperComponent = ({ children, isLanding }) => {
         {showLoading && <CommonLoader />}
         <Grid2
           item
-          size={{ xs: 11, md: !isLanding ? 8 : 12 }}
+          size={{ xs: 11, md:  6 }}
           sx={{ maxHeight: "100dvh", position: "relative" }}
         >
           {pathname != "/" && <CommonHeader />}
