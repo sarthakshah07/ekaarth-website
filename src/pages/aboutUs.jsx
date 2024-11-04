@@ -36,6 +36,7 @@ const AboutUs = () => {
           // pt={6}
           // pb={2}
           textTransform={"uppercase"}
+          className="contentHeading"
         >
           {AboutUsData.heading}
         </Typography>
@@ -66,7 +67,7 @@ const AboutUs = () => {
         </Grid2>
       </Container>
 
-     <Grid2 size={{ xs: 12 ,md:6}}>
+     <Grid2 size={{ xs: 11 ,md:6}}>
         <Grid2 container spacing={6} py={4}>
           <Grid2 size={12}>
             <Typography
@@ -77,6 +78,7 @@ const AboutUs = () => {
               sx={{ display: "flex", justifyContent: "center" }}
               pb={2}
               textTransform={"uppercase"}
+               className="contentHeading"
             >
               {AboutUsData.logoHeading}
             </Typography>
@@ -111,6 +113,7 @@ const AboutUs = () => {
               sx={{ display: "flex", justifyContent: "center" }}
               pb={2}
               textTransform={"uppercase"}
+               className="contentHeading"
             >
               {AboutUsData.profileHeading}
             </Typography>
@@ -128,6 +131,7 @@ const AboutUs = () => {
               sx={{ display: "flex", justifyContent: "center" }}
               // pb={2}
               textTransform={"uppercase"}
+               className="contentHeading"
             >
               {AboutUsData.arcitectName}
             </Typography>

@@ -35,7 +35,7 @@ const CommonSlider = ({ sliderData }) => {
             style={{ 
               backgroundImage: `url(${item.image})`, 
               position: "relative", 
-              minHeight: isMobile ? 250 : 150,
+              minHeight: isMobile ? 180 : 150,
               backgroundSize: 'cover', // Ensure the background image covers the slide
               backgroundPosition: 'center', // Center the background image
               overflow: 'hidden', // Prevent content overflow

@@ -26,11 +26,12 @@ import { useLocation, useNavigate } from "react-router-dom";
 import homelogo from "../assets/images/homeLogo.png";
 import loaderImage from "../assets/images/loading.png";
 
-const CommonHeader = (isLanding) => {
+const CommonHeader = ({isLanding}) => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const isMobile = useMediaQuery("(max-width:600px)");
   const [open, setOpen] = useState(false);
+  console.log(isLanding,"isLanding");
   const [headerMenu, setHeaderMenu] = useState([
     {
       title: "About Us",
@@ -83,7 +84,7 @@ const CommonHeader = (isLanding) => {
   return (
     <Grid2 xs={12} display="flex" p={isMobile ? 0 : 2} justifyContent={"center"} alignItems={"center"}  flexDirection={isMobile ? "column" : "row"} width={"100%"} gap={isMobile  ? 2 : 0} pt={isMobile ? 2 : 2}>
       {/* <Grid2 container> */}
-      {(isLanding && !isMobile) && (
+      {(isLanding && !isMobile) || !isLanding && (
         <Box
           sx={{
             display: "flex",
@@ -122,9 +123,11 @@ const CommonHeader = (isLanding) => {
             sx={{
               textTransform: "capitalize",
               cursor: "pointer",
-              color: "black",
+              color: "red",
               fontWeight: item.isCurrent ? "bold" : "normal",
               textDecoration: item.isCurrent ? "underline" : "none",
+              fontFamily: 'Nero Cafe M54, sans-serif',
+              letterSpacing: 2,
             }}
           >
             {item.title}

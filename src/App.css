@@ -1,12 +1,20 @@
 
 
+
+@font-face {
+  font-family: 'Nero Cafe M54';
+  src: url('./assets/fonts/NeroCafeM54.woff2') format('woff2'),
+       url('./assets/fonts/NeroCafeM54.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 *{
   background:"#F7F2EE";
-  font-style: Nero Cafe M54 Custom Font !important;
+/* font-family: 'Nero Cafe M54', sans-serif; */
+  /* font-style: Nero Cafe M54 Custom Font !important; */
   color: #4C3926 !important;
   text-align: justify !important;
 }
-
 .swiper-slide {
   position: relative; /* Ensure the slide is positioned correctly */
   cursor: pointer !important;
@@ -72,4 +80,27 @@
 
 .swiper-pagination-bullet-active {
   --swiper-theme-color: #4C3926;
+}
+
+.contentHeading{
+  font-family: 'Nero Cafe M54', sans-serif !important;
+  font-style: Nero Cafe M54 Custom Font !important;
+  color: #4C3926 !important;
+  text-align: center !important;
+}
+
+.animateCard{
+  transition: transform 0.5s ease-in-out;
+  animation: slideAbove 0.5s ease-in-out forwards;
+}
+
+@keyframes slideAbove {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
